@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+</head>
+<body>
+    <div class="bb-wrapper">
+        <div class="bb-content">
+            <div id="title" class="bb-title">
+                Лопните тренды, которые считаете бесполезными.<br/>У вас есть пять зарядов.
+            </div>
+            <div id="countdown" class="bb-countdown" style="display: none"></div>
+            <ul id="barabooms" class="bb-balloons" style="display: none">
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-1">#1</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-2">#2</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-3">#3</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-4">#4</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-5">#5</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-6">#6</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon bb-balloon-7">#7</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-8">#8</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-9">#9</div>
+                </li>
+                <li class="bb-balloon-item target animated extrafaster">
+                    <div class="bb-balloon animated bb-balloon-10">#10</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bb-footer">
+            <ul class="bb-legend">
+                <li class="bb-legend-item">Конкуренция систем управления, а не продуктов</li>
+                <li class="bb-legend-item">Бизнес точечно отказывается от людей</li>
+                <li class="bb-legend-item">Новые способы организации пространства</li>
+                <li class="bb-legend-item">Говые методы борьбы за потребителей</li>
+                <li class="bb-legend-item">Кастомизация</li>
+                <li class="bb-legend-item">Люди снова гонятся за тайным знанием</li>
+                <li class="bb-legend-item">Ужесточение санкций</li>
+                <li class="bb-legend-item">Госконтроль бизнеса и интернета с помощью новых технологий</li>
+                <li class="bb-legend-item">Снижение стоимости технологий для малого бизнеса</li>
+                <li class="bb-legend-item">Киберспорт начинает конкурировать с традицион-<br/>ным спортом на равных</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script id="bb-countdown_tmpl" type="text/x-javascript-tmpl">
+        Голосование закончится через {{days}} {{plural(days, daysTitles)}} {{hours}} {{plural(hours, hoursTitles)}} {{minutes}} {{plural(minutes, minutesTitles)}}.
+        <br/>
+        Не забудьте проверить результаты!"
+    </script>
+
+
+    <script id="bb-results_tmpl" type="text/x-javascript-tmpl">
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s1/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-1">{{Math.round(s1/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-1">#1</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s2/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-2">{{Math.round(s2/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-2">#2</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s3/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-3">{{Math.round(s3/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-3">#3</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s4/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-4">{{Math.round(s4/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-4">#4</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s5/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-5">{{Math.round(s5/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-5">#5</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s6/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-6">{{Math.round(s6/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-6">#6</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s7/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-7">{{Math.round(s7/total*100)}}%</div>
+            <div class="bb-balloon bb-balloon-7">#7</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s8/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-8">{{Math.round(s8/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-8">#8</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s9/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-9">{{Math.round(s9/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-9">#9</div>
+        </li>
+        <li class="bb-balloon-item tall animated bounceInUp" style="top: -{{Math.round(200 * s10/total)}}px">
+            <div class="bb-balloon-percents bb-balloon-percents-10">{{Math.round(s9/total*100)}}%</div>
+            <div class="bb-balloon animated bb-balloon-10">#10</div>
+        </li>
+
+
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/underscore.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
